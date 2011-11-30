@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="showcase">
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<!-- inherit css based theme -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<!-- Inherit audio-recorder module -->
+	<inherits name="com.google.gwt.audio.recorder.Recorder" />
+	<!-- Specify the app entry point class. -->
+	<entry-point class="com.google.gwt.audio.recorder.showcase.client.Showcase" />
+
+	<set-configuration-property name="UiBinder.useSafeHtmlTemplates"
+		value="true" />
+
+	<source path='client' />
+	<source path='shared' />
+</module>

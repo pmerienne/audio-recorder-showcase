@@ -1,0 +1,24 @@
+.link {
+	text-decoration: underline;
+}
+
+.link:link {
+	color: red;
+	text-decoration: underline;
+}
+
+.link:visited {
+	color: red;
+	text-decoration: underline;
+}
+
+.link:hover {
+	color: green;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.link:active {
+	color: red;
+	text-decoration: underline;
+}

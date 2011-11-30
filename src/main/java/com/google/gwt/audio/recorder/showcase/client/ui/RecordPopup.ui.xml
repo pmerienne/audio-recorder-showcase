@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:r="urn:import:com.google.gwt.audio.recorder.client">
+
+	<ui:with field="res"
+		type="com.google.gwt.audio.recorder.showcase.client.resource.ResourceBundle" />
+
+	<ui:style>
+		.close {
+			color: #CCCCCC;
+			position: absolute;
+			right: 12px;
+			top: 12px;
+		}
+		
+		.close:hover {
+			cursor: pointer;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<g:Image ui:field="close" addStyleNames="{style.close}"
+			resource="{res.closeIcon}" />
+
+		<h2>Recorder</h2>
+		<g:HTMLPanel>
+			<g:HorizontalPanel>
+				<g:Label text="Nom du fichier : " />
+				<g:TextBox ui:field="filename" />
+			</g:HorizontalPanel>
+			<hr />
+			<r:RecorderControl ui:field="recorderControl" />
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

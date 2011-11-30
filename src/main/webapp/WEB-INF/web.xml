@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<display-name>Audio recorder showcase</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+
+	<!-- Listener permettant de charger le contexte applicatif Spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- File service -->
+	<servlet>
+		<servlet-name>fileServlet</servlet-name>
+		<servlet-class>com.google.gwt.audio.recorder.showcase.server.servlet.FileServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Servlet permettant l'accès aux ressources par WS REST -->
+	<servlet>
+		<servlet-name>serviceDispatcher</servlet-name>
+		<servlet-class>com.google.gwt.audio.recorder.showcase.server.servlet.ServiceDispatcher</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>serviceDispatcher</servlet-name>
+		<url-pattern>*.rpc</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>fileServlet</servlet-name>
+		<url-pattern>/showcase/file</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>showcase.html</welcome-file>
+	</welcome-file-list>
+</web-app>
