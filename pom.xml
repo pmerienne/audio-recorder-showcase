@@ -80,7 +80,7 @@
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>audio-recorder</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 		<!-- GWT -->
 		<dependency>
@@ -219,6 +219,12 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
+		</repository>
+		<!-- gwt-recorder repository -->
+		<repository>
+			<id>gwt-recorder</id>
+			<name>gwt-recorder repo</name>
+			<url>http://github.com/pmerienne/gwt-recorder/raw/master/releases</url>
 		</repository>
 	</repositories>
 
