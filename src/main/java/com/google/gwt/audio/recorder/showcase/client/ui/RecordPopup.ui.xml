@@ -22,12 +22,14 @@
 		<g:Image ui:field="close" addStyleNames="{style.close}"
 			resource="{res.closeIcon}" />
 
-		<h2>Recorder</h2>
+		<h3>Recorder</h3>
 		<g:HTMLPanel>
-			<g:HorizontalPanel>
-				<g:Label text="Nom du fichier : " />
-				<g:TextBox ui:field="filename" />
-			</g:HorizontalPanel>
+				<form>
+					<label for="filename">Nom du fichier : </label>
+					<div class="input">
+						<g:TextBox ui:field="filename" />
+					</div>
+				</form>
 			<hr />
 			<r:RecorderControl ui:field="recorderControl" />
 		</g:HTMLPanel>

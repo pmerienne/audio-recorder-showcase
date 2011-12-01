@@ -10,6 +10,6 @@
 		<h2>Available records</h2>
 		<s:RecordTable ui:field="recordTable" />
 
-		<g:Button ui:field="newRecordButton" text="New record" />
+		<g:Button ui:field="newRecordButton" text="New record" addStyleNames="btn large primary"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 

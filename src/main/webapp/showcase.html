@@ -5,15 +5,126 @@
 	<link type="text/css" rel="stylesheet" href="showcase.css">
 	<title>Audio recorder showcase</title>
 	<script type="text/javascript" language="javascript" src="showcase/showcase.nocache.js"></script>
+	
+	<style type="text/css">
+		.masthead {
+		    background-color: #049CD9;
+	        background-image: linear-gradient(#004D9F, #049CD9);
+		    background-image: -moz-linear-gradient(#004D9F, #049CD9);
+		    background-image: -o-linear-gradient(#004D9F, #049CD9);
+		    background-image: -webkit-linear-gradient(#004D9F, #049CD9);
+		    background-image: -ms-linear-gradient(#004D9F, #049CD9);
+		    background-repeat: no-repeat;
+		}
+		.jumbotron {
+		    min-width: 940px;
+		    padding-top: 40px;
+		}
+		.jumbotron h1 {
+		    font-size: 54px;
+		    line-height: 1;
+		    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+		}
+		.jumbotron h1, .jumbotron p {
+		    color: #FFFFFF;
+		    margin-bottom: 9px;
+		    text-align: center;
+		    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+		}
+		.quickstart {
+		    background-color: #F5F5F5;
+		    background-image: -moz-linear-gradient(#F9F9F9, #F5F5F5);
+		    background-repeat: repeat-x;
+		    border-bottom: 1px solid #EEEEEE;
+		    border-top: 1px solid #FFFFFF;
+		}
+		.quickstart h6 {
+		    color: #999999;
+		}
+		.quickstart h6, .quickstart p {
+		    color: #333333;
+		    line-height: 18px;
+		    margin-bottom: 9px;
+		    text-align: center;
+		}
+		.footer {
+		    background-color: #EEEEEE;
+		    border-top: 1px solid #E5E5E5;
+		    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.024) inset;
+		    min-width: 940px;
+		    padding: 30px 0;
+		    text-shadow: 0 1px 0 #FFFFFF;
+		}
+	</style>
 </head>
 <body>
-	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
-	<noscript>
-		<div
-			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
-			Your web browser must have JavaScript enabled in order for this
-			application to display correctly.
+
+	<div class="topbar" data-scrollspy="scrollspy">
+		<div class="topbar-inner">
+			<div class="container">
+				<a class="brand" href="https://github.com/pmerienne/gwt-recorder" target="_blank">GWT Recorder</a>
+			</div>
 		</div>
-	</noscript>
+	</div>
+	<header id="overview" class="jumbotron masthead">
+		<div class="inner">
+			<div class="container">
+			<h1>GWT Recorder demo</h1>
+			<p class="lead">
+				GWT audio recorder library
+				Use flash to record audio data from a microphone. Converts the audio data to a WAV file. Uploads the WAV file to the server.
+				The WAV file is Posted as a multipart form-data request. Additional fields can be added to the request.
+			</p>
+			</div>
+		</div>
+	</header>
+	
+	<div class="quickstart">
+		<div class="container">
+			<div class="row">
+				<div class="span5">
+					<h6>Fork on GitHub</h6>
+					<p>Download, fork, pull, file issues, and more with the official GWT Recorder repo on Github.</p>
+					<p>
+						<a class="btn primary" href="https://github.com/pmerienne/gwt-recorder" target="_blank">GWT Recorder on GitHub »</a>
+					</p>
+				</div>
+				<div class="span5">
+					<h6>Download library</h6>
+					<p>Getting started by downloading gwt-recorder library v0.0.1</p>
+					<p>
+						<a class="btn primary" href="https://github.com/pmerienne/gwt-recorder/blob/master/releases/com/google/gwt/audio-recorder/0.0.1/audio-recorder-0.0.1.jar?raw=true">GWT Recorder library v0.0.1 »</a>
+					</p>
+				</div>
+				<div class="span5">
+					<h6>Maven support</h6>
+					<p>GWT Recorder is available as a maven dependency.</p>
+					<p>
+						<a class="btn primary" href="https://github.com/pmerienne/gwt-recorder" target="_blank">More informations »</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="container" class="container">
+		<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+		<noscript>
+			<div
+				style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+				Your web browser must have JavaScript enabled in order for this
+				application to display correctly.
+			</div>
+		</noscript>
+	</div>
+	
+	<footer class="footer">
+		<div class="container">
+			<p class="pull-right">
+				<a href="#">Back to top</a>
+			</p>
+			GWT Recorder demo
+		</div>
+	</footer>
 </body>
 </html>

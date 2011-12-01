@@ -11,6 +11,6 @@ public class Showcase implements EntryPoint {
 	public void onModuleLoad() {
 		ResourceBundle.INSTANCE.style().ensureInjected();
 		Application application = new Application();
-		RootPanel.get().add(application);
+		RootPanel.get("container").add(application);
 	}
 }
