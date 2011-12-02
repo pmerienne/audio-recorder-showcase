@@ -8,8 +8,12 @@
 	<g:HTMLPanel>
 		<!-- Record list -->
 		<h2>Available records</h2>
-		<s:RecordTable ui:field="recordTable" />
-
-		<g:Button ui:field="newRecordButton" text="New record" addStyleNames="btn large primary"/>
+		<g:ScrollPanel width="100%" height="400px">
+			<s:RecordTable ui:field="recordTable" />
+		</g:ScrollPanel>
+		
+		<div class="well">
+			<g:Button ui:field="newRecordButton" text="New record" addStyleNames="btn large primary"/>
+		</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 

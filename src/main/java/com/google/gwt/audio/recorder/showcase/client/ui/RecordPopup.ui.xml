@@ -25,7 +25,7 @@
 		<h3>Recorder</h3>
 		<g:HTMLPanel>
 				<form>
-					<label for="filename">Nom du fichier : </label>
+					<label for="filename">Filename : </label>
 					<div class="input">
 						<g:TextBox ui:field="filename" />
 					</div>

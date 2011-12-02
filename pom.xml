@@ -248,7 +248,7 @@
 									<overWriteReleases>false</overWriteReleases>
 									<overWriteSnapshots>false</overWriteSnapshots>
 									<overWriteIfNewer>true</overWriteIfNewer>
-									<excludeArtifactIds>gwt-user,gwt-dev</excludeArtifactIds>
+									<excludeArtifactIds>gwt-user,gwt-dev,audio-recorder</excludeArtifactIds>
 								</configuration>
 							</execution>
 						</executions>

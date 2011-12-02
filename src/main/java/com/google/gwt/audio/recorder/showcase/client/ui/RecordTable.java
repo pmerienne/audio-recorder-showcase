@@ -19,6 +19,14 @@ public class RecordTable extends CellTable<Record> {
 	private DateTimeFormat df = DateTimeFormat.getFormat(DATE_PATTERN);
 
 	public RecordTable() {
+		// ID
+		TextColumn<Record> idColumn = new TextColumn<Record>() {
+			@Override
+			public String getValue(Record record) {
+				return record.getId();
+			}
+		};
+		this.addColumn(idColumn, "ID");
 		// Name
 		TextColumn<Record> filenameColumn = new TextColumn<Record>() {
 			@Override
@@ -54,9 +62,10 @@ public class RecordTable extends CellTable<Record> {
 
 		// Size
 		this.setWidth("100%", true);
-		this.setColumnWidth(filenameColumn, "35%");
-		this.setColumnWidth(creationDateColumn, "30%");
-		this.setColumnWidth(downloadColumn, "30%");
+		this.setColumnWidth(idColumn, "15%");
+		this.setColumnWidth(filenameColumn, "30%");
+		this.setColumnWidth(creationDateColumn, "25%");
+		this.setColumnWidth(downloadColumn, "25%");
 	}
 
 	private class DecoratedClickableTextCell extends ClickableTextCell {
